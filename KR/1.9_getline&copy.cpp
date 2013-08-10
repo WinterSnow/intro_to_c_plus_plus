@@ -10,7 +10,7 @@ main()
 	int len;	/* current line length */
 	int max;	/* maximum length seen so far */
 	char line[MAXLINE];		/* current input line */					
-	char longest[MAXLINE];
+	char longest[MAXLINE];	/* longest line saved here */
 
 	max=0;
 	while ((len = getline(line, MAXLINE))>0)
