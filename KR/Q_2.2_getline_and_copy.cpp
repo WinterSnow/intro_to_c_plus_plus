@@ -33,6 +33,7 @@ int getline(char s[], int lim)
 			i=0;
 			if(i<lim-1){
 				s[i]=c;
+				++i;
 			}
 
 		}
