@@ -1,29 +1,30 @@
 #include <iostream>
-using namespace std; 
+using namespace std;
 
-void squeeze(char s[], int c);
+
+void squeeze(char s[], char c);
 
 int main() {
 
+	char* c;
 	char* s;
-	char c;
 
 	cout << "Please enter a charater: ";
-	cin >> c ;
+	cin.getline(c,100);
 
-	cout << "Please enter a string: ";
-	cin >> s ;
+	cin.clear(); cin.sync();
 
+	cout << "Please enter the string to be squeezed: ";
+	cin.getline(s,100);
 
-
-	squeeze(s,c);
+	squeeze(s, c[0]);
 
 	cout << "The squeezed result is " << s;
 
 }
 
 /* squeeze: delete all c from s */
-void squeeze(char s[], int c)
+void squeeze(char s[], char c)
 {
 	int i, j;
 
