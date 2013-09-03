@@ -13,7 +13,7 @@ int main() {
 
 }
 
-/* atoi: convert hexademical s to integer */
+/* htoi: convert hexademical s to integer */
 int htoi(char s[])
 {
 	int i, n, c;
