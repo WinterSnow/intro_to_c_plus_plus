@@ -6,12 +6,12 @@ int return_1st_location(char s[], char c[]);
 
 int main() {
 
-	char* c;
-	char* s;
+	char* c = new char[256];
+	char* s = new char[256];
 
 	cout << "Please enter a squeezer string: ";
 	cin.getline(c,100);
-
+    
 	cin.clear(); cin.sync();
 
 	cout << "Please enter the string to be squeezed: ";
@@ -20,10 +20,8 @@ int main() {
 	int i;
 
 	int out = return_1st_location(s, c);
-		
-	cout << "The squeezed result is " << out;
 
-
+    cout << "The squeezed result is " << out;
 }
 
 
