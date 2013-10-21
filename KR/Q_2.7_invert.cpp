@@ -5,7 +5,7 @@ unsigned invert(unsigned x, int p, int n);
 
 int main() {
 
-	int x, p, n, y;
+	int x, p, n;
 	cout << "Please enter a number for x: ";
 	cin >> x ;
 	cin.clear(); cin.sync();
@@ -26,7 +26,7 @@ int main() {
 /* getbits: get n bits from position p */
 unsigned invert(unsigned x, int p, int n)
 {
-	int a, b, c, d, e, f, g;
+	int a, b, c, d, e, f;
 	a = x & (~ 0 << p+1);
 	b = x & ~ (~ 0<<(p+1-n));
 	c = a | b;
