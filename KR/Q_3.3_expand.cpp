@@ -18,7 +18,7 @@ int main() {
 char* expand(char s1[], char s2[])
 {
 	int i, s2_index;
-//	bool non_dash_seen = false;
+	bool non_dash_seen = false;
 
 	// For every character in the string s1
 	for (i = 0, s2_index = 0; s1[i] != '\0'; i++){
@@ -31,9 +31,9 @@ char* expand(char s1[], char s2[])
 			s2_index +=1;
 			non_dash_seen = true;
 
-		}// else if (s1[i] == '-' && non_dash_seen == false){
+		}  else if (s1[i] == '-' && non_dash_seen == false){
 			// The line below can be replaced by the line above to work for multiple leading dashes. We need to take bool non-dash_seen = false out of comment to do so.  
-			else if (s1[i] == '-' && i==0){ 
+		//	else if (s1[i] == '-' && i==0){ 
 			s2[s2_index]=s1[i];
 			s2_index +=1;	
 
