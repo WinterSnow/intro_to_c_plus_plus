@@ -11,6 +11,7 @@ int main() {
     int n;
     cout << "Please enter a number for n: ";
     cin >> n ;
+    printd(n);
 }
 /* printd: print n in decimal */
 void printd (int n)
