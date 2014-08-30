@@ -10,7 +10,7 @@ void reverse(char s[]);
 int main() {
 
     int n;
-    char* s= new char [16384];
+    char* s= new char [256];
     cout << "Please enter a number for n: ";
     cin >> n ;
     cin.clear(); cin.sync();
@@ -32,6 +32,7 @@ void itoa (int n, char s[])
     if (sign < 0)
         s[i++] = '-';
     s[i] = '\0';
+
     reverse (s);
 }
 
