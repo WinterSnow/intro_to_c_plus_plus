@@ -10,13 +10,13 @@ void reverse(char s[]);
 int main() {
 
     int n;
-    char* s;
+    char* s= new char [16384];
     cout << "Please enter a number for n: ";
     cin >> n ;
     cin.clear(); cin.sync();
 
-    cout << "Please enter a string for s: ";
-    cin >> s ;
+    itoa (n,s);
+    cout << s;
 }
 /* itoa: convert n to characters in s */
 void itoa (int n, char s[])
