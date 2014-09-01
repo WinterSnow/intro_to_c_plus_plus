@@ -5,7 +5,7 @@ int htoi(char s[]);
 
 int main() {
 
-	char* s ;
+	char* s= new char [256] ;
 	cout << "Please enter a number: ";
 	cin >> s ;
  
