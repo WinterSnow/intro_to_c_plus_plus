@@ -1,3 +1,4 @@
+#include <iomanip> /* for cout setprecision */
 #include <ctype.h>
 #include <iostream>
 using namespace std; 
@@ -5,11 +6,12 @@ using namespace std;
 double atof(char s[]);
 int main() {
 
-    double x;
+    char* x = new char[256];
     cout << "Please enter a number for x: ";
     cin >> x ;
-
-    cout << double(x);
+    cout << atof(x) << '\n'; /* this line can be replaced by the following two lines below to output a double with precision 4. */
+//    cout << fixed << setprecision(4);
+//    cout << atof(x) << endl;
 
 }
 /* atof: convert string s to double */
