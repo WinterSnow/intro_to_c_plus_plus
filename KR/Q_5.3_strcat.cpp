@@ -26,7 +26,7 @@ int main() {
 /* strcat: concatenate t to end of s; s must be big enough */
 void strcat_pointer(char s[],char t[])
 {
-    while (*s!='\0')  /* find the end of s  */
+    while (*s!='\0')  /* find the end of s  */ /* checking againtst if it's the end of string is not necessary for the pointer version because the statement is true as long as the character is not the end of the string marker.  */
         s++;
     while ((*s++ = *t++) != '\0')   /*  copy t   */
         ;
