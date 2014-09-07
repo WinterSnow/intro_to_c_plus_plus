@@ -5,7 +5,6 @@ using namespace std;
 
 void strcat_pointer(char s[], char t[]);
 
-/* strindex: return index of t in s, -1 if none */
 int main() {
 
     char a[256];
