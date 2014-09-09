@@ -1,9 +1,7 @@
-
-#include <stdio.h>
 #include <iostream>
 using namespace std; 
 
-void strcat_pointer(char s[], char t[]);
+void strcpy(char s[], char t[]);
 
 int main() {
 
