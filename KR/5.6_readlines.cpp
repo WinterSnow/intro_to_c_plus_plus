@@ -13,15 +13,15 @@ char *alloc(int);
 int readlines(char **, int);
 
 int main(){
-    char* a = new char [256][256];
+    char** a= new char*[256];
     int n = 10;
     //cout << "Please enter a string for n: ";
     //cin >> n ;
-    readlines(*a,n);
+    readlines(a,n);
 }
 
 /* readlines: read input lines  */
-int readlines(char *lineprt[], int maxlines)
+int readlines(char *lineptr[], int maxlines)
 {
     int len, nlines;
     char *p, line[MAXLEN];
