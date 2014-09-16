@@ -1,41 +1,46 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h> // This library is necessary for malloc: http://stackoverflow.com/questions/7006256/how-to-allocate-memory
 #include <iostream>
 using namespace std; 
 
-#define MAXLINES  5000
-char *lineptr[MAXLINES];
+#define MAXLINES  1000
+char *mainlineptr[MAXLINES];
 
 
 #define MAXLEN 1000     /* max length of any input line     */
 int getline(char *, int);
-char *alloc(int);
+//char *alloc(int);  // This is not needed
 int readlines(char **, int);
 
 int main(){
-    char** a= new char*[256];
-    int n = 10;
-    //cout << "Please enter a string for n: ";
-    //cin >> n ;
-    readlines(a,n);
+    char* a[MAXLEN];
+    cout << "Please enter several strings separated by the return key: " << "\n";
+
+    int numlines = readlines(mainlineptr, MAXLINES);
+    cout << "\n\nHere is what you input:\n";
+    for (int i=0; i < numlines; i++){
+        cout << mainlineptr[i] << "\n";
+    }
 }
 
 /* readlines: read input lines  */
 int readlines(char *lineptr[], int maxlines)
 {
     int len, nlines;
-    char *p, line[MAXLEN];
+    char *s, line[MAXLEN];
 
     nlines = 0;
-    while ((len = getline(line, MAXLEN))>0)
-        if (nlines >= maxlines || (p = alloc(len)) == NULL)
+    while ((len = getline(line, MAXLEN))>1){
+        if (nlines >= maxlines || (s = (char *)malloc(len)) == NULL) // For Malloc to return a character, it should look like this: http://stackoverflow.com/questions/1963780/when-should-i-use-malloc-in-c-and-when-dont-i
             return -1;
         else {
             line[len-1] ='\0';  /* delete newline  */
-            strcpy(p,line);
-            lineptr[nlines++]=p;
+            strcpy(s,line);
+            lineptr[nlines++]=s;
         }
-        return nlines;
+    }
+    return nlines;
 }
 
 /* getline: read a line, return length */
