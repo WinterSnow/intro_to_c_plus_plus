@@ -14,7 +14,6 @@ int getline(char *, int);
 int readlines(char **, int);
 
 int main(){
-    char* a[MAXLEN];
     cout << "Please enter several strings separated by the return key: " << "\n";
 
     int numlines = readlines(mainlineptr, MAXLINES);
